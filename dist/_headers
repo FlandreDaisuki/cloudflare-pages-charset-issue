@@ -1,0 +1,5 @@
+/ja
+  Content-Type: text/html; charset=shift_jis
+
+/with-charset.js
+  Content-Type: application/javascript; charset=utf-8

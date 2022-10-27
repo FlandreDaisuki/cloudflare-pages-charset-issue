@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The response content-type charset of this document is Shift_JIS</title>
+</head>
+<body>
+  <h1>The response content-type charset of this document is <strong>Shift_JIS</strong></h1>
+  <h2>Load JS with <code>content-type: application/javascript</code></h2>
+  <button id="load-without-charset-js-btn">Load it!</button>
+  <h2>Load JS with <code>content-type: application/javascript; charset="utf-8"</code></h2>
+  <button id="load-with-charset-js-btn">Load it!</button>
+  <section id="output"></section>
+  <script>
+    document.querySelector('#load-without-charset-js-btn').onclick = () => {
+      const scriptEl = document.createElement('script')
+      scriptEl.src = 'without-charset.js'
+      document.head.appendChild(scriptEl);
+    }
+    document.querySelector('#load-with-charset-js-btn').onclick = () => {
+      const scriptEl = document.createElement('script')
+      scriptEl.src = 'with-charset.js'
+      document.head.appendChild(scriptEl);
+    }
+  </script>
+</body>
+</html>
